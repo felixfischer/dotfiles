@@ -1,0 +1,17 @@
+# ignore all by default
+/*
+
+
+# do not ignore:
+
+!vim/
+
+!bash_profile
+!bashrc
+!.gitignore
+!deploy.sh
+!set-osx-defaults.sh
+!screenrc
+!README.md
+!tmux.conf
+!vimrc
