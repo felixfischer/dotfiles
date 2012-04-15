@@ -43,3 +43,6 @@ fi
 if [[ $platform == 'mac' ]]; then
   sh $dir/set-osx-defaults.sh
 fi
+
+# reload .bashrc
+source ~/.bashrc
