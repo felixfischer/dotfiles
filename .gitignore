@@ -3,9 +3,7 @@
 
 
 # do not ignore:
-
-!vim/
-
+!bash/
 !bash_profile
 !bashrc
 !.gitignore
@@ -14,4 +12,5 @@
 !screenrc
 !README.md
 !tmux.conf
+!vim/
 !vimrc

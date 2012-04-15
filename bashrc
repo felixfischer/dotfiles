@@ -61,3 +61,18 @@ print_before_the_prompt () {
 
 PROMPT_COMMAND=print_before_the_prompt
 PS1='--> '
+
+# detect platform
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then platform='mac'
+elif [[ "$unamestr" == 'FreeBSD' ]]; then platform='freebsd'
+fi
+
+# load platform specific bash config
+if [[ $platform == 'mac' ]]; then
+  source ~/dotfiles/bash/osx.sh
+else
+  source ~/dotfiles/bash/linux.sh
+fi
