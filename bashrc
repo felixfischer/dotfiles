@@ -1,39 +1,11 @@
 # Colors
 source ~/dotfiles/bash/colors.sh
 
-# Some standard aliases
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias l='ls -lah'
+# Aliases
+source ~/dotfiles/bash/aliases.sh
 
-# Git aliases
-alias gcl='git clone'
-alias gs='git status'
-alias gss='git status -s'
-alias gco='git checkout'
-alias gl='git log --oneline'
-alias gup='git fetch && git rebase'
-alias gp='git push'
-alias gpo='git push origin'
-alias gb='git branch'
-alias gh='git help '
-alias ga='git add'
-alias gall='git add .'
-alias gcm='git commit -m'
-alias gcam='git commit -am'
-alias gll='git log --graph --pretty=oneline --abbrev-commit'
-alias cdiff='git diff --cached'
-alias gsdiff='git diff --staged'
-
-# other aliases
-alias ta='tmux attach'
-alias lastfm='shell-fm lastfm://'
-alias reload='source ~/.bashrc'
-
-# Setting PATH
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
+# bash prompt
+source ~/dotfiles/bash/prompt.sh
 
 # Set Editor
 export EDITOR="$vim"
@@ -46,33 +18,8 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoreboth
 export HISTTIMEFORMAT='%F %T '
 
-# Custom Bash prompt
-git_prompt () {
-  if ! git rev-parse --git-dir > /dev/null 2>&1; then return 0; fi
-  git_branch=$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
-  if git diff --quiet 2>/dev/null >&2; then git_status=""
-  else git_status=" *"; fi
-  echo "($git_branch$git_status)"
-}
-
-print_before_the_prompt () {
-	printf "\n$txtred%s$txtblu@$txtred%s$txtblu:$bldgrn%s $txtwht$(git_prompt) \n$txtrst" "$USER" "$HOSTNAME" "$PWD"
-}
-
-PROMPT_COMMAND=print_before_the_prompt
-PS1='--> '
-
-# detect platform
-platform='unknown'
+# detect platform and load platform specific bash config
 unamestr=`uname`
-if [[ "$unamestr" == 'Linux' ]]; then platform='linux'
-elif [[ "$unamestr" == 'Darwin' ]]; then platform='mac'
-elif [[ "$unamestr" == 'FreeBSD' ]]; then platform='freebsd'
-fi
-
-# load platform specific bash config
-if [[ $platform == 'mac' ]]; then
-  source ~/dotfiles/bash/osx.sh
-else
-  source ~/dotfiles/bash/linux.sh
+if [[ "$unamestr" == 'Darwin' ]]; then source ~/dotfiles/bash/osx.sh
+else source ~/dotfiles/bash/linux.sh
 fi
