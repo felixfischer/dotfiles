@@ -7,4 +7,5 @@ Created mainly for my personal convenience. Please be careful.
 Execute this on a fresh user profile:
 
     cd ~
-    git clone https://github.com/felixfischer/dotfiles.git .
+    git clone git://github.com/felixfischer/dotfiles.git
+    dotfiles/deploy.sh
