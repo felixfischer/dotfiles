@@ -2,5 +2,5 @@
 alias ls="ls -G"
 
 # Setting PATH
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
 export PATH
