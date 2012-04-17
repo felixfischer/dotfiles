@@ -2,6 +2,8 @@
 #
 # better settings for Mac OS X
 #
+echo "Show all files"
+defaults write com.apple.Finder AppleShowAllFiles YES
 
 echo "Show all filename extensions in Finder"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -91,8 +93,8 @@ chflags nohidden ~/Library
 #echo "Enable the 2D Dock"
 #defaults write com.apple.dock no-glass -bool true
 
-# Automatically hide and show the Dock
-# defaults write com.apple.dock autohide -bool true
+echo "Automatically hide and show the Dock"
+defaults write com.apple.dock autohide -bool true
 
 #echo "Make Dock icons of hidden applications translucent"
 #defaults write com.apple.dock showhidden -bool true
@@ -103,15 +105,18 @@ chflags nohidden ~/Library
 # Disable menu bar transparency
 #defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
-# Show remaining battery time; hide percentage
-# defaults write com.apple.menuextra.battery ShowPercent -string "NO"
-# defaults write com.apple.menuextra.battery ShowTime -string "YES"
+echo "Show remaining battery time; hide percentage"
+defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
-# echo "Always show scrollbars"
-# defaults write NSGlobalDomain AppleShowScrollBars -string "Auto"
+echo "Always show scrollbars"
+defaults write NSGlobalDomain AppleShowScrollBars -string "Auto"
 
-#echo "Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons"
-#defaults write com.apple.finder QuitMenuItem -bool true
+echo "Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons"
+defaults write com.apple.finder QuitMenuItem -bool true
+
+echo "Hide desktop icons"
+defaults write com.apple.finder CreateDesktop -bool false
 
 # Disable window animations and Get Info animations in Finder
 # defaults write com.apple.finder DisableAllAnimations -bool true
@@ -144,10 +149,10 @@ chflags nohidden ~/Library
 #echo "Enable AirDrop over Ethernet and on unsupported Macs running Lion"
 #defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
-#echo "Disable disk image verification"
-#defaults write com.apple.frameworks.diskimages skip-verify -bool true
-#defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-#defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+echo "Disable disk image verification"
+defaults write com.apple.frameworks.diskimages skip-verify -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 #echo "Disable the warning before emptying the Trash"
 #defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
@@ -181,8 +186,8 @@ chflags nohidden ~/Library
 # defaults write com.apple.Mail DisableReplyAnimations -bool true
 # defaults write com.apple.Mail DisableSendAnimations -bool true
 
-# Disable Resume system-wide
-# defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+echo "Disable Resume system-wide"
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 #echo "Reset Launchpad"
 #[ -e ~/Library/Application\ Support/Dock/*.db ] && rm ~/Library/Application\ Support/Dock/*.db

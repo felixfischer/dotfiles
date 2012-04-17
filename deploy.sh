@@ -39,11 +39,5 @@ elif [[ "$unamestr" == 'Darwin' ]]; then platform='mac'
 elif [[ "$unamestr" == 'FreeBSD' ]]; then platform='freebsd'
 fi
 
-# if on a Mac, set system defaults
-if [[ $platform == 'mac' ]]; then
-	#echo "Setting Mac system defaults"
-  #sh $dir/set-osx-defaults.sh
-fi
-
 echo "reloading .bashrc"
 source ~/.bashrc
