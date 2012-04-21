@@ -23,3 +23,4 @@ unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then source ~/dotfiles/bash/osx.sh
 else source ~/dotfiles/bash/linux.sh
 fi
+source "`brew --prefix grc`/etc/grc.bashrc"

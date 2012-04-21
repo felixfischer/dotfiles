@@ -3,6 +3,10 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias l='ls -lah'
+alias b='cd ../'
+alias bb='cd ../../'
+alias bbb='cd ../../../'
+alias bbbb='cd ../../../../'
 
 # Git aliases
 alias gcl='git clone'
@@ -27,3 +31,8 @@ alias gsdiff='git diff --staged'
 alias ta='tmux attach'
 alias lastfm='shell-fm lastfm://'
 alias reload='source ~/.bashrc'
+
+# aptitude aliases
+alias sas='sudo aptitude search '
+alias sai='sudo aptitude install '
+alias sar='sudo aptitude -P remove '
