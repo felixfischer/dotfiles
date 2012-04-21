@@ -20,7 +20,9 @@ export HISTTIMEFORMAT='%F %T '
 
 # detect platform and load platform specific bash config
 unamestr=`uname`
-if [[ "$unamestr" == 'Darwin' ]]; then source ~/dotfiles/bash/osx.sh
-else source ~/dotfiles/bash/linux.sh
+if [[ "$unamestr" == 'Darwin' ]]; then
+  source ~/dotfiles/bash/osx.sh
+  source "`brew --prefix grc`/etc/grc.bashrc"
+else 
+  source ~/dotfiles/bash/linux.sh
 fi
-source "`brew --prefix grc`/etc/grc.bashrc"
