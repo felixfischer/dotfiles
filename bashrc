@@ -8,8 +8,8 @@ source ~/dotfiles/bash/aliases.sh
 source ~/dotfiles/bash/prompt.sh
 
 # Set Editor
-export EDITOR="$vim"
-export GIT_EDITOR="$vim"
+export EDITOR=vim
+export GIT_EDITOR=vim
 
 # Make Bash append rather than overwrite the history on disk
 # and don't put duplicate lines in the history

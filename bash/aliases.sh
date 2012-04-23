@@ -33,6 +33,8 @@ alias lastfm='shell-fm lastfm://'
 alias reload='source ~/.bashrc'
 
 # aptitude aliases
+alias sau='sudo aptitude update'
 alias sas='sudo aptitude search '
 alias sai='sudo aptitude install '
 alias sar='sudo aptitude -P remove '
+alias sasu='sudo aptitude -P safe-upgrade'
