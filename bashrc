@@ -22,7 +22,7 @@ export HISTTIMEFORMAT='%F %T '
 unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then
   source ~/dotfiles/bash/osx.sh
-  source "`brew --prefix grc`/etc/grc.bashrc"
+  #source "`brew --prefix grc`/etc/grc.bashrc"
 else 
   source ~/dotfiles/bash/linux.sh
 fi
