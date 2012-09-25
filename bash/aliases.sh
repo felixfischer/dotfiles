@@ -38,3 +38,8 @@ alias sas='sudo aptitude search '
 alias sai='sudo aptitude install '
 #alias sar='sudo aptitude -P remove '
 alias sasu='sudo aptitude -P safe-upgrade'
+
+# todo.txt aliases
+alias t=todo
+alias tl='todo list'
+alias ta='todo add'
