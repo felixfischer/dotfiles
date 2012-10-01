@@ -40,6 +40,6 @@ alias sai='sudo aptitude install '
 alias sasu='sudo aptitude -P safe-upgrade'
 
 # todo.txt aliases
-alias t=todo
-alias tl='todo list'
-alias ta='todo add'
+alias t='todo -n'
+alias tl='t list'
+alias ta='t -t add'
