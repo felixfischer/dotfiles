@@ -26,3 +26,5 @@ if [[ "$unamestr" == 'Darwin' ]]; then
 else 
   source ~/dotfiles/bash/linux.sh
 fi
+
+PATH=$HOME/bin/:/usr/bin/local:$PATH
