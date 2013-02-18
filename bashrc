@@ -27,8 +27,8 @@ else
   source ~/dotfiles/bash/linux.sh
 fi
 
-export PATH="$HOME/bin/:/usr/bin/local:/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/bin:/usr/bin/local:/usr/local/heroku/bin:$PATH"
 
 # Set gems path
-export GEM_HOME="~/.gem"
-export GEM_PATH="~/.gem"
+export GEM_HOME="$HOME/.gem"
+export GEM_PATH="$HOME/.gem"
