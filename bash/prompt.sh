@@ -8,7 +8,7 @@ git_prompt () {
 }
 
 print_before_the_prompt () {
-  printf "\n$txtred%s$txtblu@$txtred%s$txtblu:$bldgrn%s $txtwht$(git_prompt) \n$txtrst" "$USER" $(hostname -f) "$PWD"
+  printf "\n$txtred%s$txtblu@$txtred%s$txtblu:$bldgrn%s $txtwht$(git_prompt) \n$txtrst" "$USER" $HOSTNAME "$PWD"
 }
 
 PROMPT_COMMAND=print_before_the_prompt
